@@ -1,6 +1,7 @@
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #5a7da1 0%, #05192e 100%);
+    /* Cambiamos el degradado a tonos corporativos azules intensos y violetas */
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #0f172a 100%);
     color: #f8fafc;
     margin: 0;
     padding: 20px;
@@ -9,22 +10,27 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+
 header {
     text-align: center;
     margin-bottom: 30px;
 }
 header h1 {
     margin-bottom: 10px;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 header p {
-    color: #dbeafe;
-    font-size: 15px;
+    color: #93c5fd;
+    font-size: 16px;
+    font-weight: 500;
 }
+
 main {
     width: 100%;
     max-width: 900px;
 }
+
 .search-container {
     display: flex;
     justify-content: center;
@@ -32,45 +38,52 @@ main {
     flex-wrap: wrap;
     margin-bottom: 25px;
 }
+
 input {
     width: 280px;
     padding: 12px;
     border-radius: 8px;
-    border: 1px solid #156e80;
-    background: #166561;
+    border: 1px solid #2563eb;
+    background: #1e293b;
     color: white;
     font-size: 15px;
 }
 input::placeholder {
-    color: #d1fae5;
+    color: #94a3b8;
 }
+
+/* Cambiamos el estilo del botón para resaltar */
 button {
     padding: 12px 20px;
     border: none;
     border-radius: 8px;
-    background: #4acfde;
-    color: #083344;
+    background: #2563eb;
+    color: white;
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 button:hover {
-    background: #6b8eae;
+    background: #1d4ed8;
     transform: scale(1.05);
 }
+
 .weather-card {
-    background: rgba(132, 147, 215, 0.95);
+    background: rgba(30, 41, 59, 0.85);
     padding: 25px;
     border-radius: 15px;
-    border: 1px solid #7f8fc9;
+    border: 1px solid #3b82f6;
     box-shadow: 0 10px 25px rgba(0,0,0,.35);
     margin-bottom: 25px;
     line-height: 1.7;
+    backdrop-filter: blur(5px);
 }
 .weather-card h2, .weather-card h3 {
     text-align: center;
     margin-top: 0;
+    color: #3b82f6;
 }
 .description {
     background: rgba(0,0,0,.25);
@@ -78,14 +91,14 @@ button:hover {
     border-radius: 8px;
 }
 .geo-data {
-    color: #d1fae5;
+    color: #60a5fa;
     margin-top: 10px;
 }
 .weather-data {
     margin-top: 15px;
 }
 .weather-data h4 {
-    color: #d1fae5;
+    color: #60a5fa;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -95,23 +108,26 @@ button:hover {
 .success-footer {
     margin-top: 20px;
     text-align: center;
-    color: #d1fae5;
+    color: #34d399;
     font-weight: bold;
 }
+
 #map {
     width: 100%;
     height: 450px;
     border-radius: 15px;
     overflow: hidden;
-    border: 3px solid #4acfde;
+    border: 3px solid #2563eb;
     box-shadow: 0 10px 25px rgba(0,0,0,.4);
     margin-top: 20px;
 }
+
 hr {
     border: none;
-    border-top: 1px solid rgba(255,255,255,.3);
+    border-top: 1px solid rgba(255,255,255,.2);
     margin: 20px 0;
 }
+
 @media (max-width: 768px) {
     .search-container {
         flex-direction: column;
